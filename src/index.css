@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 22% 14%;
+    --foreground: 0 0% 100%;
+
+    --card: 230 22% 16%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 230 22% 14%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 255 68% 74%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 31% 54%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 230 22% 24%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 255 68% 74%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 230 22% 24%;
+    --input: 230 22% 24%;
+    --ring: 255 68% 74%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(to bottom, #1A1F2C, #221F26);
+  }
+
+  .space-glow {
+    text-shadow: 0 0 10px rgba(155, 135, 245, 0.5);
+  }
+
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px -10px rgba(155, 135, 245, 0.3);
+  }
+
+  .space-gradient {
+    background: linear-gradient(135deg, rgba(155, 135, 245, 0.1), rgba(30, 174, 219, 0.1));
+  }
+}
